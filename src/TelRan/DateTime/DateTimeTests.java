@@ -76,7 +76,7 @@ class DateTimeTests {
 		Iterator<ZoneId> iterator = zonesOfCanada.iterator();
 		while (iterator.hasNext()) {
 			zoneCurrent = iterator.next();
-			System.out.println(timeOfCanada.now(zoneCurrent).toLocalDateTime() + " TimeZone " + zoneCurrent.toString());
+			System.out.println(timeOfCanada.now(zoneCurrent).toLocalDateTime().format(DateTimeFormatter.ofPattern("YYYY-M-d H:m:s")) + " TimeZone " + zoneCurrent.toString());
 		}				
 	}
 
