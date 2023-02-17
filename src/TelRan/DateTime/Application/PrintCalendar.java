@@ -56,12 +56,11 @@ public class PrintCalendar {
 	}
 
 	private static int getFirstDay(int month, int year, int firstDay) {
-		//int firstDay = DayOfWeek.WEDNESDAY; 
 		int res = LocalDate.of(year, month, 1).getDayOfWeek().getValue() + (DayOfWeek.values().length - firstDay);
 		if (res > DayOfWeek.values().length) {
 			res -= DayOfWeek.values().length;
 		}
-		return res;//LocalDate.of(year, month, 1).getDayOfWeek().getValue();
+		return res;
 	}
 
 	private static void printWeekDays(int firstDay) {
